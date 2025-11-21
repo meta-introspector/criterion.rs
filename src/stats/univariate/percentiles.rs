@@ -17,7 +17,7 @@ where
     /// Safety:
     ///
     /// - Make sure that `p` is in the range `[0, 100]`
-    unsafe fn at_unchecked(&self, p: A) -> A {
+    unsafe fn at_unchecked(&self, p: A) -> A { unsafe {
         let _100 = A::cast(100);
         debug_assert!(p >= A::cast(0) && p <= _100);
         debug_assert!(!self.0.is_empty());
@@ -35,7 +35,7 @@ where
 
             floor + (ceiling - floor) * fraction
         }
-    }
+    }}
 
     /// Returns the percentile at `p`%
     ///
