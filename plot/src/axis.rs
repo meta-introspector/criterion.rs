@@ -5,7 +5,7 @@ use std::borrow::Cow;
 use crate::map;
 use crate::traits::{Configure, Data, Set};
 use crate::{
-    grid, Axis, Default, Display, Grid, Label, Range, Scale, ScaleFactor, Script, TicLabels,
+    Axis, Default, Display, Grid, Label, Range, Scale, ScaleFactor, Script, TicLabels, grid,
 };
 
 /// Properties of the coordinate axes

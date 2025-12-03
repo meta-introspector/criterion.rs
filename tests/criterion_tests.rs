@@ -1,7 +1,7 @@
 #[cfg(feature = "plotters")]
 use criterion::SamplingMode;
 use criterion::{
-    criterion_group, criterion_main, profiler::Profiler, BatchSize, BenchmarkId, Criterion,
+    BatchSize, BenchmarkId, Criterion, criterion_group, criterion_main, profiler::Profiler,
 };
 use serde_json::value::Value;
 use std::cell::{Cell, RefCell};
@@ -10,7 +10,7 @@ use std::fs::File;
 use std::path::{Path, PathBuf};
 use std::rc::Rc;
 use std::time::{Duration, SystemTime};
-use tempfile::{tempdir, TempDir};
+use tempfile::{TempDir, tempdir};
 use walkdir::WalkDir;
 
 /*
@@ -466,7 +466,7 @@ fn test_criterion_doesnt_panic_if_measured_time_is_zero() {
 }
 
 mod macros {
-    use super::{criterion_group, criterion_main, Criterion};
+    use super::{Criterion, criterion_group, criterion_main};
 
     #[test]
     #[should_panic(expected = "group executed")]

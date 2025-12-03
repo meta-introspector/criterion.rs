@@ -1,7 +1,6 @@
 use criterion::{
-    criterion_group,
+    Criterion, Throughput, criterion_group,
     measurement::{Measurement, ValueFormatter},
-    Criterion, Throughput,
 };
 use std::hint::black_box;
 use std::time::{Duration, Instant};
